@@ -4,6 +4,8 @@ class Definition:
         self.term = term
 
     def get(self):
-        pass
+        df = pandas.read_csv('data.csv')
+        return tuple(df.loc[df['word'] == self.term]['defintion'])
 
-    
+d = Defintion(term="sum")
+print(d.get())
