@@ -6,7 +6,7 @@ class Definition:
         self.term = term
 
     def get(self):
-        df = pandas.read_csv('data.csv')
+        df = pandas.read_csv('/home/sutclw/PycharmProjects/DictionaryApp/data.csv')
         print(self.term)
         return tuple(df.loc[df['word'] == self.term]['definition'])
 
